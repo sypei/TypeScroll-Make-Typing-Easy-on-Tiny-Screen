@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PPT demo</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+    body{background:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603774568293&di=dfa0764ea037396283d753672cbf1fae&imgtype=0&src=http%3A%2F%2Fci.xiaohongshu.com%2F67cb9797-7da1-4be2-a512-8d6933b8f295%40r_750w_750h_ss1.jpg')}
+    .maincate{width: 110px;
+        height: 34px;
+        line-height: 34px;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-overflow-scrolling: touch;
+        text-align: center;
+        background: #fac7fc;
+        padding: 0px 5px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    .maincate a{ color: #000000; text-decoration: none; margin-right: 5px;}
+    .maincate::-webkit-scrollbar{display: none;}
+
+    .maincate2{width: 110px;
+        height: 34px;
+        line-height: 34px;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-overflow-scrolling: touch;
+        text-align: center;
+        background: #c5e5fc;
+        padding: 0px 5px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    .maincate2 a{ color: #000000; text-decoration: none; margin-right: 5px;}
+    .maincate2::-webkit-scrollbar{display: none;}
+
+    .maincate3{width: 110px;
+        height: 34px;
+        line-height: 30px;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-overflow-scrolling: touch;
+        text-align: center;
+        background: #d3d3d3;
+        padding: 5px 5px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    .maincate3 a{ color: #000000; text-decoration: none; margin-right: 5px;}
+    .maincate3::-webkit-scrollbar{display:none;}
+    .touch-area{position:absolute;left:0; right:0; top:40%; bottom:0;margin: auto;}
+    .show-text{width: 100%;
+        height: 120px;
+        line-height: 20px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
+        overflow-x: hidden;
+        overflow-y: hidden;
+        /* -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-overflow-scrolling: touch; */
+        background: #d3d3d3;
+        padding: 5px 5px;
+        margin: auto;
+        box-sizing: border-box;font-size:100%;border:2px solid #000000;}
+</style>
+</head>
+<body>
+<div style="text-align: center;"><b>Enjoy typing!</b><br><br></div>
+<div class="show-text"></div>
+<div id="timer" style="text-align: center;"></div>
+<div id="show-WPM" style="text-align: center;"></div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div style="position:absolute;left:0; right:0; 
+top:60%; bottom:0;margin: auto;text-align: center;
+color: #d3d3d3;" >
+<b>HINTS:<br>first row is FIXED.<br>
+    second row can SCROLL.<br>third row: enter, space, delete</b></div>
+<div class="touch-area">
+    <div id="maincate1" class="maincate">
+    <a id=aa href="javascript:void(0);">a</a>
+    <a id=e href="javascript:void(0);">e</a>
+    <a id=i href="javascript:void(0);">i</a>
+    <a id=o href="javascript:void(0);">o</a>
+    <a id=u href="javascript:void(0);">u</a>
+    <a id=t href="javascript:void(0);">t</a>
+    </div>
+    <div id="maincate2" class="maincate2">
+    &nbsp;
+    <a href="javascript:void(0);">b</a>
+    <a href="javascript:void(0);">c</a>
+    <a href="javascript:void(0);">d</a>
+    <a href="javascript:void(0);">f</a>
+    <a href="javascript:void(0);">g</a>
+    <a href="javascript:void(0);">h</a>
+    <a href="javascript:void(0);">j</a>
+    <a href="javascript:void(0);">k</a>
+    <a href="javascript:void(0);">l</a>
+    <a href="javascript:void(0);">m</a>
+    <a href="javascript:void(0);">n</a>
+    <a href="javascript:void(0);">p</a>
+    <a href="javascript:void(0);">q</a>
+    <a href="javascript:void(0);">r</a>
+    <a href="javascript:void(0);">s</a>
+    <a href="javascript:void(0);">t</a>
+    <a href="javascript:void(0);">v</a>
+    <a href="javascript:void(0);">w</a>
+    <a href="javascript:void(0);">x</a>
+    <a href="javascript:void(0);">y</a>
+    <a href="javascript:void(0);">z</a>
+    <a id="comma" href="javascript:void(0);" style="margin-right: 5px;margin-left: 2px;"><img src="https://cdn.onlinewebfonts.com/svg/img_401575.png" height="10px"></a>
+    <a id="period" href="javascript:void(0);"><img src="https://img2.pngio.com/dot-clipart-period-mark-picture-944730-dot-clipart-period-mark-period-png-2000_2000.png" height="6px"></a>
+    
+</div>
+
+<div id="maincate3" class="maincate3">
+    <a id="enter" href="javascript:void(0);"><img  src="https://static.thenounproject.com/png/1092340-200.png" height="25px"></a>
+    <a id="space" href="javascript:void(0);"><img  src="https://www.materialui.co/materialIcons/editor/space_bar_black_192x192.png" height="25px"></a>
+    <a id="delete" href="javascript:void(0);"><img  src="https://cdn2.iconfinder.com/data/icons/harmonicons-03/64/delete-512.png" height="25px" /></a>
+</div>
+</div>
+
+<script type="text/javascript">
+    var touchArea = document.getElementsByClassName('touch-area')[0];
+    // var key = document.getElementsByTagName("a");
+    
+    var showText = document.getElementsByClassName('show-text')[0];
+    var showWPM = document.getElementById('show-WPM');
+    var enterNode = document.getElementById('enter');
+    var spaceNode = document.getElementById('space');
+    var commaNode = document.getElementById('comma');
+    var periodNode = document.getElementById('period');
+    var deleteNode = document.getElementById('delete');
+    var seconds=60;
+    var timer;
+    var count;
+
+    function myFunction() {
+        if(seconds < 60) { // I want it to say 1:00, not 60
+            document.getElementById("timer").innerText = seconds.toString();
+        }
+        if (seconds >0 ) { // so it doesn't go to -1
+            seconds--;
+            count = 60*(showText.innerText.length-1)/(5*Number((60-seconds)))
+            showWPM.innerText= 'Your WPM is '+count.toPrecision(2).toString()
+        } else {
+            clearInterval(timer);
+            timer="Great! You have finished :)";
+        }
+    }
+
+    touchArea.onclick = function(event) {
+        // console.log('touchareaevent')
+    if(!timer) {
+        timer = setInterval(function() { 
+        myFunction();
+        }, 1000); // every second
+    }
+    } 
+
+    document.getElementById("timer").innerText="1:00"; 
+
+
+    for (let key of document.getElementsByTagName("a")) {
+        key.onclick = function(event){
+            console.log(count)
+            console.log(showText.innerText.length)
+            // console.log(event)
+            // console.log(event.target.innerText)
+            if (event.target.innerText){
+            showText.innerText += event.target.innerText;
+            }  
+        }
+    }
+
+     
+
+    enterNode.onclick = function(event){
+        console.log(event)
+        showText.innerHTML += '<br>';
+    }
+
+    spaceNode.onclick = function(event){
+        console.log(event)
+        showText.innerHTML += '&nbsp;';
+    }
+
+    deleteNode.onclick = function(event){
+        console.log(event)
+        showText.innerText = showText.innerText ? showText.innerText.slice(0,-1) : showText.innerText;
+    }
+
+    commaNode.onclick = function(event){
+        console.log(event)
+        showText.innerHTML += ',';
+    }
+
+    periodNode.onclick = function(event){
+        console.log(event)
+        showText.innerHTML += '.';
+    }
+    
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8;">
+<title>PPT demo 2</title>
+<meta name="author" content="ppt" />
+<meta name="keywords" content="ppt's js lib" />
+<meta name="description" content="ppt version 3" />
+<meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no">
+<style>
+body{background:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603774568293&di=dfa0764ea037396283d753672cbf1fae&imgtype=0&src=http%3A%2F%2Fci.xiaohongshu.com%2F67cb9797-7da1-4be2-a512-8d6933b8f295%40r_750w_750h_ss1.jpg')}
+*{margin:0;padding:0;}
+.show-text{font-size:400%;border:1px solid #FFFFCC;}
+.touch-area{position:absolute;top:80%;left:50%;transform:translate(-50%,-80%);width:25%;height:15%;border:1px solid black;background:#ccc;font-size:16px;}
+.line{position: relative; height: 49px; line-height: 49px;}
+.keys{box-sizing: border-box; float: left; width: 49px; height: 49px; line-height: 40px; margin: 0 0 3px 3px; border-radius: 4px; border: 1px solid #333; text-align: center; font-size:80%;  background-color: #fff;}
+.nothing{box-sizing: border-box; float: left; width: 49px; height: 49px; line-height: 40px; margin: 0 0 3px 3px; border-radius: 4px; border: 1px solid #ccc; background-color: #ccc;}
+</style>
+</head>
+
+<body>
+<div style="color:gray;padding:3px 0 0 3px;">Please share us your idea:</div>
+<div class="show-text" style="width:600px;overflow:hidden;white-space:normal;word-break:break-all;padding:3px 3px 3px 3px;margin:5px 20px 5px 20px;"></div>
+<div class="touch-area">
+    <div class="line">
+        <div id="Mark" class="keys" data-kid="Mark">Mark</div>
+        <div id="ABC" class="keys" data-kid="ABC">ABC</div>
+        <div id="DEF" class="keys" data-kid="DEF">DEF</div>
+    </div>
+    <div class="line">
+        <div id="GHI" class="keys" data-kid="GHI">GHI</div>
+		<div id="JKL" class="keys" data-kid="JKL">JKL</div>
+        <div id="MNO" class="keys" data-kid="MNO">MNO</div>
+    </div>
+    <div class="line">
+        <div id="PQRS" class="keys" data-kid="PQRS">PQRS</div>
+		<div id="TUV" class="keys" data-kid="TUV">TUV</div>
+		<div id="WXYZ" class="keys" data-kid="WXYZ">WXYZ</div>
+    </div>
+</div>
+
+<script>
+	var touchArea = document.getElementsByClassName('touch-area')[0];
+	console.log(touchArea.children[0].children[0]);
+	var showText = document.getElementsByClassName('show-text')[0];
+	console.log('666',showText.innerHTML,'666');
+	var markNode = document.getElementById('Mark');
+	var aNode = document.getElementById('ABC');
+	var dNode = document.getElementById('DEF');
+	var gNode = document.getElementById('GHI');
+	var jNode = document.getElementById('JKL');
+	var mNode = document.getElementById('MNO');
+	var pNode = document.getElementById('PQRS');
+	var tNode = document.getElementById('TUV');
+	var yNode = document.getElementById('WXYZ');
+                function mainplat(){
+			markNode.innerText = 'Mark';
+			aNode.className = 'keys';
+			aNode.innerText = 'ABC';
+			dNode.className = 'keys';
+			dNode.innerText = 'DEF';
+			gNode.className = 'keys';
+			gNode.innerText = 'GHI';
+			jNode.innerText = 'JKL';
+			mNode.className = 'keys';
+			mNode.innerText = 'MNO';
+			pNode.className = 'keys';
+			pNode.innerText = 'PQRS';
+			tNode.className = 'keys';
+			tNode.innerText = 'TUV';
+			yNode.className = 'keys';
+			yNode.innerText = 'WXYZ';
+}
+	touchArea.addEventListener('touchstart', function (event) {
+		if (event.target.innerText === 'Mark') {
+			markNode.innerText = 'Space';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'Enter';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'Del';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '.';
+		}
+		else if (event.target.innerText === 'ABC') {
+			markNode.innerText = 'A';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'B';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'C';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'DEF') {
+			markNode.innerText = 'D';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'E';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'F';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'GHI') {
+			markNode.innerText = 'G';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'H';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'I';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'JKL') {
+			markNode.innerText = 'J';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'K';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'L';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'MNO') {
+			markNode.innerText = 'M';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'N';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'O';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'PQRS') {
+			markNode.innerText = 'P';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'Q';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'R';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = 'S';
+		}
+		else if (event.target.innerText === 'TUV') {
+			markNode.innerText = 'T';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'U';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'V';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = '';
+			yNode.className = 'nothing';
+		}
+		else if (event.target.innerText === 'WXYZ') {
+			markNode.innerText = 'W';
+			aNode.innerText = '';
+			aNode.className = 'nothing';
+			dNode.innerText = 'X';
+			gNode.innerText = '';
+			gNode.className = 'nothing';
+			jNode.innerText = 'Back';
+			mNode.innerText = '';
+			mNode.className = 'nothing';
+			pNode.innerText = 'Y';
+			tNode.innerText = '';
+			tNode.className = 'nothing';
+			yNode.innerText = 'Z';
+		}
+		else if (event.target.innerText === 'Back') {
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Space') {
+			showText.innerHTML += '&nbsp;';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Enter') {
+			showText.innerHTML += '<br>';
+                                                mainplat()
+		}
+		else if (event.target.innerText === '.') {
+			showText.innerHTML += '.';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'A') {
+			showText.innerText += 'A';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'B') {
+			showText.innerText += 'B';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'C') {
+			showText.innerText += 'C';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'D') {
+			showText.innerText += 'D';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'E') {
+			showText.innerText += 'E';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'F') {
+			showText.innerText += 'F';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'G') {
+			showText.innerText += 'G';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'H') {
+			showText.innerText += 'H';
+	                                mainplat()
+		}
+		else if (event.target.innerText === 'I') {
+			showText.innerText += 'I';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'J') {
+			showText.innerText += 'J';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'K') {
+			showText.innerText += 'K';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'L') {
+			showText.innerText += 'L';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'M') {
+			showText.innerText += 'M';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'N') {
+			showText.innerText += 'N';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'O') {
+			showText.innerText += 'O';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'P') {
+			showText.innerText += 'P';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Q') {
+			showText.innerText += 'Q';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'R') {
+			showText.innerText += 'R';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'S') {
+			showText.innerText += 'S';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'T') {
+			showText.innerText += 'T';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'U') {
+			showText.innerText += 'U';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'V') {
+			showText.innerText += 'V';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'W') {
+			showText.innerText += 'W';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'X') {
+			showText.innerText += 'X';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Y') {
+			showText.innerText += 'Y';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Z') {
+			showText.innerText += 'Z';
+                                                mainplat()
+		}
+		else if (event.target.innerText === 'Del') {
+			showText.innerText = showText.innerText ? showText.innerText.slice(0,-1) : showText.innerText;
+		}
+	});
+</script>
+
+</body>
+</html>
